@@ -1,0 +1,21 @@
+﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs">
+    <Files>
+      <File FileName="Assets/PostProcessing/Editor/PropertyDrawers/MinDrawer.cs" Line="11" Column="62" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Pokemon 3D" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="31aae5ae-8ef9-472a-bb9b-1e56386a3d37" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
