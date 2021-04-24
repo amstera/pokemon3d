@@ -59,6 +59,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Components/FxaaComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/MotionBlurModel.cs" />
     <Compile Include="Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs" />
+    <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/UserLutComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/Scripts/CameraTracker.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
