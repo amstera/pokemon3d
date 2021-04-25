@@ -3,11 +3,17 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float Speed = 3.5f;
+    public bool IsFrozen;
     private Direction _direction;
     public Animator Animator;
 
     void Update()
     {
+        if (IsFrozen)
+        {
+            return;
+        }
+
         Direction newDirection = Direction.None;
         bool isWalking = false;
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))

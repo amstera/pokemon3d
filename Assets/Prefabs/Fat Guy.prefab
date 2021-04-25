@@ -2601,8 +2601,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 100, y: 100, z: 150}
-  m_Center: {x: 0, y: 0, z: -80}
+  m_Size: {x: 100, y: 57.946552, z: 150.00002}
+  m_Center: {x: 0, y: 2.0033221, z: -80.00001}
 --- !u!114 &4617264078710432225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2615,6 +2615,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0894b07f7b01842328261e91320cbbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldRotate: 1
+  Dialog: Technology is incredible! You can now store and recall items and  POKEMON
+    as data via PC!
 --- !u!1 &6541817938310890785
 GameObject:
   m_ObjectHideFlags: 0

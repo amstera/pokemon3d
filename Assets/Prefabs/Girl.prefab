@@ -189,6 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0894b07f7b01842328261e91320cbbe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShouldRotate: 1
+  Dialog: I'm raising POKEMON too! When they get strong, they can protect me!
 --- !u!65 &9075153402953169991
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -200,8 +202,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.25, z: 0.5}
-  m_Center: {x: 0, y: 0, z: -0.25}
+  m_Size: {x: 0.25, y: 0.2773088, z: 0.5}
+  m_Center: {x: 0, y: 0.0002430507, z: -0.25000003}
 --- !u!1 &181199049375961454
 GameObject:
   m_ObjectHideFlags: 0
