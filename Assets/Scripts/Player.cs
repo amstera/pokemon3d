@@ -1,40 +1,43 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     public float Speed = 3.5f;
     public bool IsFrozen;
     private Direction _direction;
+    private Direction _forcedDirection = Direction.None;
     public Animator Animator;
 
     void Update()
     {
         if (IsFrozen)
         {
+            Animator.SetBool("IsWalking", false);
             return;
         }
 
         Direction newDirection = Direction.None;
         bool isWalking = false;
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && _forcedDirection == Direction.None || _forcedDirection == Direction.East)
         {
             newDirection = Direction.East;
             transform.position += Vector3.forward * Speed * Time.deltaTime;
             isWalking = true;
         }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && _forcedDirection == Direction.None || _forcedDirection == Direction.West)
         {
             newDirection = Direction.West;
             transform.position += Vector3.back * Speed * Time.deltaTime;
             isWalking = true;
         }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        else if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && _forcedDirection == Direction.None || _forcedDirection == Direction.North)
         {
             newDirection = Direction.North;
             transform.position += Vector3.left * Speed * Time.deltaTime;
             isWalking = true;
         }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        else if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && _forcedDirection == Direction.None || _forcedDirection == Direction.South)
         {
             newDirection = Direction.South;
             transform.position += Vector3.right * Speed * Time.deltaTime;
@@ -46,6 +49,28 @@ public class Player : MonoBehaviour
             Animator.SetBool("IsWalking", isWalking);
         }
 
+        ChangeDirection(newDirection);
+    }
+
+    public void FollowProfessor()
+    {
+        _forcedDirection = Direction.South;
+        Invoke("GoRight", 7.25f);
+    }
+
+    private void GoRight()
+    {
+        _forcedDirection = Direction.East;
+        Invoke("EnterBuilding", 2f);
+    }
+
+    private void EnterBuilding()
+    {
+        SceneManager.LoadScene("Lab");
+    }
+
+    private void ChangeDirection(Direction newDirection)
+    {
         if (_direction != newDirection && newDirection != Direction.None)
         {
             int angleChange = ((int)newDirection - (int)_direction) * 90;

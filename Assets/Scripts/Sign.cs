@@ -9,7 +9,7 @@ public class Sign : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !string.IsNullOrEmpty(Dialog))
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (Vector3.Distance(transform.position, player.transform.position) < 2)
+            if (Vector3.Distance(transform.position, player.transform.position) < 1.5f)
             {
                 DialogBox.Instance.ShowDialog(Dialog);
             }

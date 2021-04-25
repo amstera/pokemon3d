@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,7 @@ public class DialogBox : MonoBehaviour
     private bool _canFinish;
     private bool _isFinished = true;
     private float _showDialogTimeout;
+    private Action _callback;
 
     void Start()
     {
@@ -48,9 +50,9 @@ public class DialogBox : MonoBehaviour
         }
     }
 
-    public void ShowDialog(string text)
+    public void ShowDialog(string text, Action callback = null, bool forceMessage = false)
     {
-        if (!_isFinished || _isPrinting || (Time.time - _showDialogTimeout) < 0.5f)
+        if (!_isFinished || _isPrinting || (!forceMessage && (Time.time - _showDialogTimeout) < 0.5f))
         {
             return;
         }
@@ -59,6 +61,7 @@ public class DialogBox : MonoBehaviour
         Arrow.enabled = false;
         Box.enabled = true;
         _dialogIndex = 0;
+        _callback = callback;
         _currentDialog = text.ToCharArray();
         StartCoroutine(PrintText());
     }
@@ -72,6 +75,7 @@ public class DialogBox : MonoBehaviour
         _canFinish = false;
         _showDialogTimeout = Time.time;
         _isFinished = true;
+        _callback?.Invoke();
     }
 
     private IEnumerator PrintText()

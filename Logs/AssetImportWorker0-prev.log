@@ -12,322 +12,410 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55820
+52305
 Successfully changed project path to: /Users/tylergreen/Games/Pokemon 3D
 /Users/tylergreen/Games/Pokemon 3D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 37.19 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 67.13 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.1f1 (77a89f25062f)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/tylergreen/Games/Pokemon 3D/Assets
 GfxDevice: creating device client; threaded=0
-2021-04-25 00:19:41.427 Unity[16371:355751] Color LCD preferred device: Intel Iris Pro Graphics (low power)
-2021-04-25 00:19:41.427 Unity[16371:355751] Metal devices available: 2
-2021-04-25 00:19:41.427 Unity[16371:355751] 0: AMD Radeon R9 M370X (high power)
-2021-04-25 00:19:41.427 Unity[16371:355751] 1: Intel Iris Pro Graphics (low power)
-2021-04-25 00:19:41.428 Unity[16371:355751] Using device AMD Radeon R9 M370X (high power)
+2021-04-25 13:40:06.289 Unity[5391:134297] Color LCD preferred device: Intel Iris Pro Graphics (low power)
+2021-04-25 13:40:06.289 Unity[5391:134297] Metal devices available: 2
+2021-04-25 13:40:06.289 Unity[5391:134297] 0: AMD Radeon R9 M370X (high power)
+2021-04-25 13:40:06.289 Unity[5391:134297] 1: Intel Iris Pro Graphics (low power)
+2021-04-25 13:40:06.290 Unity[5391:134297] Using device AMD Radeon R9 M370X (high power)
 Initializing Metal device caps: AMD Radeon R9 M370X
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56371
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56391
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.1f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.000766 seconds.
+Registered in 0.001676 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 34.63 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 65.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.217 seconds
+- Completed reload, in  4.100 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000792 seconds.
+Registered in 0.001575 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.140 seconds
+- Completed reload, in  2.576 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1364 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 1367 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 135.7 MB.
-System memory in use after: 135.8 MB.
+System memory in use after: 135.7 MB.
 
-Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1802.
-Total: 2.878881 ms (FindLiveObjects: 0.305910 ms CreateObjectMapping: 0.067094 ms MarkObjects: 2.344685 ms  DeleteObjects: 0.159571 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Animations/Walking.anim
-  artifactKey: Guid(d265c09b8524a4491a460703fc265a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Animations/Walking.anim using Guid(d265c09b8524a4491a460703fc265a32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c4ebaefde42c4490b108d8fe180230') in 0.913193 seconds
-  Import took 0.919204 seconds .
-
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 111.9 MB.
-System memory in use after: 111.9 MB.
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1802.
-Total: 3.161036 ms (FindLiveObjects: 0.329557 ms CreateObjectMapping: 0.071503 ms MarkObjects: 2.659691 ms  DeleteObjects: 0.098708 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 1806.
+Total: 3.815871 ms (FindLiveObjects: 0.403342 ms CreateObjectMapping: 0.114683 ms MarkObjects: 2.941888 ms  DeleteObjects: 0.354038 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.776966 seconds.
-  path: Assets/Prefabs/Trainer.prefab
-  artifactKey: Guid(df0cdea3155eb4dfca13f1d40034fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Trainer.prefab using Guid(df0cdea3155eb4dfca13f1d40034fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bcde2c43e1e9c13479a7c0ac8b152fd') in 0.874485 seconds
-  Import took 0.879814 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000793 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.126 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 160.4 MB.
-System memory in use after: 160.4 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1813.
-Total: 2.308341 ms (FindLiveObjects: 0.231765 ms CreateObjectMapping: 0.082081 ms MarkObjects: 1.903040 ms  DeleteObjects: 0.090289 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 164.876089 seconds.
-  path: Assets/Images/Materials/Invisible.mat
-  artifactKey: Guid(927fe331257da4dca816fc4b70295079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Materials/Invisible.mat using Guid(927fe331257da4dca816fc4b70295079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be41affa4b43296cdec9d960e29eae85') in 0.368409 seconds
-  Import took 0.371697 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000649 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.103 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 165.3 MB.
-System memory in use after: 165.4 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1850.
-Total: 2.529237 ms (FindLiveObjects: 0.262753 ms CreateObjectMapping: 0.060449 ms MarkObjects: 2.113798 ms  DeleteObjects: 0.090936 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 254.013154 seconds.
-  path: Assets/Images/Materials/Invisible.mat
-  artifactKey: Guid(927fe331257da4dca816fc4b70295079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Images/Materials/Invisible.mat using Guid(927fe331257da4dca816fc4b70295079) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d8d475acb10e861103f3fd61c984c02') in 0.163113 seconds
-  Import took 0.166755 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000719 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.973 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 165.8 MB.
-System memory in use after: 165.8 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1854.
-Total: 2.500735 ms (FindLiveObjects: 0.292421 ms CreateObjectMapping: 0.061173 ms MarkObjects: 2.027756 ms  DeleteObjects: 0.117401 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002165 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.114 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 166.3 MB.
-System memory in use after: 166.3 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1857.
-Total: 2.671729 ms (FindLiveObjects: 0.498043 ms CreateObjectMapping: 0.136329 ms MarkObjects: 1.886399 ms  DeleteObjects: 0.149393 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003939 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.622 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 166.6 MB.
-System memory in use after: 166.6 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1860.
-Total: 2.888408 ms (FindLiveObjects: 0.583996 ms CreateObjectMapping: 0.128228 ms MarkObjects: 2.033446 ms  DeleteObjects: 0.139625 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000758 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.059 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 167.2 MB.
-System memory in use after: 167.2 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1863.
-Total: 2.357442 ms (FindLiveObjects: 0.258459 ms CreateObjectMapping: 0.060211 ms MarkObjects: 1.916780 ms  DeleteObjects: 0.118714 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.000806 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.105 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1329 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 167.6 MB.
-System memory in use after: 167.6 MB.
-
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1866.
-Total: 2.147546 ms (FindLiveObjects: 0.237785 ms CreateObjectMapping: 0.052706 ms MarkObjects: 1.743804 ms  DeleteObjects: 0.111987 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 1369.607145 seconds.
   path: Assets/Scripts/NPC.cs
   artifactKey: Guid(0894b07f7b01842328261e91320cbbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/NPC.cs using Guid(0894b07f7b01842328261e91320cbbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '248dac35d50f73c5d52ab40c1d9ebbd7') in 0.477264 seconds
-  Import took 0.481714 seconds .
+Start importing Assets/Scripts/NPC.cs using Guid(0894b07f7b01842328261e91320cbbe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc9b3139bdc7d7ad4d297e9188b804d') in 1.105597 seconds
+  Import took 1.111089 seconds .
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 11 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 111.7 MB.
+System memory in use after: 111.7 MB.
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 1806.
+Total: 3.498213 ms (FindLiveObjects: 0.356988 ms CreateObjectMapping: 0.163591 ms MarkObjects: 2.817922 ms  DeleteObjects: 0.158084 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000790 seconds.
+Registered in 0.000658 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.057 seconds
+- Completed reload, in  1.082 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1330 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 172.2 MB.
-System memory in use after: 172.3 MB.
+Unloading 1332 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.4 MB.
+System memory in use after: 138.5 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1870.
-Total: 2.466988 ms (FindLiveObjects: 0.286842 ms CreateObjectMapping: 0.064671 ms MarkObjects: 2.005426 ms  DeleteObjects: 0.107931 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.324786 seconds.
-  path: Assets/Prefabs/Fat Guy.prefab
-  artifactKey: Guid(d88cf0e978c7d4c25abbc5946083c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Fat Guy.prefab using Guid(d88cf0e978c7d4c25abbc5946083c5bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8fea60b7198edd83495f71ced879674') in 0.176630 seconds
-  Import took 0.181094 seconds .
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1809.
+Total: 2.263227 ms (FindLiveObjects: 0.251026 ms CreateObjectMapping: 0.051109 ms MarkObjects: 1.799500 ms  DeleteObjects: 0.159864 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000707 seconds.
+Registered in 0.001041 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.953 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1332 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 138.8 MB.
+System memory in use after: 138.8 MB.
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1812.
+Total: 2.854406 ms (FindLiveObjects: 0.198553 ms CreateObjectMapping: 0.078900 ms MarkObjects: 2.316766 ms  DeleteObjects: 0.255292 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 176.879310 seconds.
+  path: Assets/Models/Professor Oak
+  artifactKey: Guid(74240d20b82a948c494cc4439efb2f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak using Guid(74240d20b82a948c494cc4439efb2f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b377a7211f5ff69b9b786dab0cde3be6') in 0.005520 seconds
+  Import took 0.008620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.010654 seconds.
+  path: Assets/Models/Professor Oak
+  artifactKey: Guid(74240d20b82a948c494cc4439efb2f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak using Guid(74240d20b82a948c494cc4439efb2f8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b377a7211f5ff69b9b786dab0cde3be6') in 0.000910 seconds
+  Import took 0.003888 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.064850 seconds.
+  path: Assets/Models/Professor Oak/chara_d_alpha.png
+  artifactKey: Guid(9b3974b21616747f5a3f8180dd63141c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_d_alpha.png using Guid(9b3974b21616747f5a3f8180dd63141c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '917d00e1eb4fa95da39c6170ddb634da') in 0.967951 seconds
+  Import took 0.971197 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000281 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_eye_col_a.png
+  artifactKey: Guid(46916d6a5062643279e72435ed2529d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_eye_col_a.png using Guid(46916d6a5062643279e72435ed2529d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fecf1293d9e9645bf0df9553ce7a8e8d') in 0.011096 seconds
+  Import took 0.014022 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000404 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_skin_col.png
+  artifactKey: Guid(5099e511ce1de4586a922bca1942834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_skin_col.png using Guid(5099e511ce1de4586a922bca1942834d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88f5b8b417be9990ad9efbab0799971b') in 0.007235 seconds
+  Import took 0.009781 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_doctor.dae
+  artifactKey: Guid(967bcfc8fcd96456384619f5835184d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_doctor.dae using Guid(967bcfc8fcd96456384619f5835184d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d8be293ece8d977514f15f4edc9f7cc') in 0.684698 seconds
+  Import took 0.688176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_eye_col.png
+  artifactKey: Guid(80fc2082c5f5448159568d05a1d567e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_eye_col.png using Guid(80fc2082c5f5448159568d05a1d567e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41cf983972a7db9f7b316602959e647d') in 0.011355 seconds
+  Import took 0.015904 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_body_amb_r.png
+  artifactKey: Guid(3a7361c4ccdc344d38755fa35ecb8836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_body_amb_r.png using Guid(3a7361c4ccdc344d38755fa35ecb8836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bcfb4e6a5b2c0f2d96b854d990ed9051') in 0.009410 seconds
+  Import took 0.011945 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Models/Professor Oak/chara_spc_03.png
+  artifactKey: Guid(c96d799ea1d274055841d2857821788c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_spc_03.png using Guid(c96d799ea1d274055841d2857821788c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c19ac19e2c3bafb9c15fb65f5cd93b57') in 0.008346 seconds
+  Import took 0.010571 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_hair_spc.png
+  artifactKey: Guid(4fa6692e739d341df9f885819c47ea9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_hair_spc.png using Guid(4fa6692e739d341df9f885819c47ea9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15083b29fbcbc46ccffadafbe9bda186') in 0.007464 seconds
+  Import took 0.010040 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_hair_col.png
+  artifactKey: Guid(bf5834e9ce36043b4a8ff0c5c9e4cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_hair_col.png using Guid(bf5834e9ce36043b4a8ff0c5c9e4cfd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce7051d3245c96714fff1b240cdd39be') in 0.009481 seconds
+  Import took 0.011480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_skin_amb_B.png
+  artifactKey: Guid(e28edf77a0d8f43c188ceee27e8da288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_skin_amb_B.png using Guid(e28edf77a0d8f43c188ceee27e8da288) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c7c950cd97497f948ea5ee746f1c138') in 0.006572 seconds
+  Import took 0.009389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_hair_amb_B.png
+  artifactKey: Guid(717022c6089074d7ea45205dbdef2bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_hair_amb_B.png using Guid(717022c6089074d7ea45205dbdef2bb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4b8b08e36f3fab01a42ea131aa9bd0') in 0.008416 seconds
+  Import took 0.011016 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Models/Professor Oak/chara_lta_00.png
+  artifactKey: Guid(232ef0aba929c4c29b72640296b198c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_lta_00.png using Guid(232ef0aba929c4c29b72640296b198c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b52efde284468e5ee8001ddf701db2e') in 0.011178 seconds
+  Import took 0.013262 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Models/Professor Oak/chara_d_ambient.png
+  artifactKey: Guid(752f11f3f8c92422ab0f77be1f470b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_d_ambient.png using Guid(752f11f3f8c92422ab0f77be1f470b09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7f26bf2ba4416ac662d6efab73772f') in 0.007417 seconds
+  Import took 0.009725 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_skin_amb_r.png
+  artifactKey: Guid(0cd4f89f851324db59ce37a357e0eade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_skin_amb_r.png using Guid(0cd4f89f851324db59ce37a357e0eade) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '829e32d9988dfa2354bc3f7677d8108a') in 0.008185 seconds
+  Import took 0.010353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_body_col.png
+  artifactKey: Guid(1b799da32a09945aea07988cf261c5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_body_col.png using Guid(1b799da32a09945aea07988cf261c5b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5b5338e51a66c4b6d294da9aacde07') in 0.008176 seconds
+  Import took 0.010203 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_hair_amb_r.png
+  artifactKey: Guid(897d465845d024101b9d625e75aa08b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_hair_amb_r.png using Guid(897d465845d024101b9d625e75aa08b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '161c74ee07f94aa587450195e004bd2f') in 0.007095 seconds
+  Import took 0.009009 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_doctorOpenCollada.dae
+  artifactKey: Guid(cc1a65880007247b982108d65338da17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_doctorOpenCollada.dae using Guid(cc1a65880007247b982108d65338da17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38a3b8c0bece0af8c4b4ae117c535964') in 0.166273 seconds
+  Import took 0.169644 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000271 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_body_spc.png
+  artifactKey: Guid(434a5a87bc6d44e258d71f6f5f9c253d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_body_spc.png using Guid(434a5a87bc6d44e258d71f6f5f9c253d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d581954dcd1f671d6097b870f622679') in 0.010808 seconds
+  Import took 0.013736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_hair_amb_G.png
+  artifactKey: Guid(fe9783c5acdde48308f80bc891ee5374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_hair_amb_G.png using Guid(fe9783c5acdde48308f80bc891ee5374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bb3e1124480d9e47968a3f147c79bd0') in 0.013922 seconds
+  Import took 0.016059 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_skin_amb_G.png
+  artifactKey: Guid(fb48ad0fbc60d4a1495da4d2f374b6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_skin_amb_G.png using Guid(fb48ad0fbc60d4a1495da4d2f374b6f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c362df863fc1247adc148b2902068c4e') in 0.007976 seconds
+  Import took 0.010652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Models/Professor Oak/chara_d_white.png
+  artifactKey: Guid(6bf12118bfdb4442e87c374786958bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_d_white.png using Guid(6bf12118bfdb4442e87c374786958bff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3108693fad1b7d5d7e3ca2767bbe042') in 0.006788 seconds
+  Import took 0.009014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_body_amb_G.png
+  artifactKey: Guid(5faf479c9052a4f2c8d573a4da09ccce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_body_amb_G.png using Guid(5faf479c9052a4f2c8d573a4da09ccce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68718e7115d8f068ffce1a87b25a45aa') in 0.008282 seconds
+  Import took 0.010367 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000223 seconds.
+  path: Assets/Models/Professor Oak/chara_lta_01.png
+  artifactKey: Guid(7974eae687bac445c86f4f2c9ac15407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_lta_01.png using Guid(7974eae687bac445c86f4f2c9ac15407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e43a9a210693c6c5891c9cd4f6e619') in 0.007599 seconds
+  Import took 0.010611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Models/Professor Oak/tr0004_00_body_amb_B.png
+  artifactKey: Guid(16545509be2e54b14b46b614bee56937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/tr0004_00_body_amb_B.png using Guid(16545509be2e54b14b46b614bee56937) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e158948f05f9d3761b7c8d8b65cb1fa3') in 0.010859 seconds
+  Import took 0.013657 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005138 seconds.
+  path: Assets/Models/Professor Oak/chara_lta_01.png
+  artifactKey: Guid(7974eae687bac445c86f4f2c9ac15407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/chara_lta_01.png using Guid(7974eae687bac445c86f4f2c9ac15407) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e43a9a210693c6c5891c9cd4f6e619') in 0.007857 seconds
+  Import took 0.010695 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.060265 seconds.
+  path: Assets/Prefabs/Trainer.prefab
+  artifactKey: Guid(df0cdea3155eb4dfca13f1d40034fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Trainer.prefab using Guid(df0cdea3155eb4dfca13f1d40034fe46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b299aafaf7ab397524fc2951bd971307') in 0.821164 seconds
+  Import took 0.825938 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.956291 seconds.
+  path: Assets/Prefabs/Professor Oak.prefab
+  artifactKey: Guid(96a1675788cb442f393f42f134c6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Professor Oak.prefab using Guid(96a1675788cb442f393f42f134c6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa69aa512db6df88e283328c369c097') in 0.046475 seconds
+  Import took 0.050360 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000364 seconds.
+  path: Assets/Prefabs/Professor Oak.prefab
+  artifactKey: Guid(96a1675788cb442f393f42f134c6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Professor Oak.prefab using Guid(96a1675788cb442f393f42f134c6ba70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa69aa512db6df88e283328c369c097') in 0.021208 seconds
+  Import took 0.023840 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.766958 seconds.
+  path: Assets/Models/Professor Oak/Materials
+  artifactKey: Guid(770d7d2b5b06442bf90c1b54b1356399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/Materials using Guid(770d7d2b5b06442bf90c1b54b1356399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d02ae923547ae020ac92239b09ecc32') in 0.002356 seconds
+  Import took 0.005536 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.387119 seconds.
+  path: Assets/Models/Professor Oak/Materials/tr0004_00_body_col.mat
+  artifactKey: Guid(a3360636f087d4b56ad89260ae0d2f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/Materials/tr0004_00_body_col.mat using Guid(a3360636f087d4b56ad89260ae0d2f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16d3fdefbf3a2a9fd08a2bf44480a118') in 0.331748 seconds
+  Import took 0.335190 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000245 seconds.
+  path: Assets/Models/Professor Oak/Materials/tr0004_00_eye_col.mat
+  artifactKey: Guid(3d3eadc0889e94a8f88cbd7724780c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/Materials/tr0004_00_eye_col.mat using Guid(3d3eadc0889e94a8f88cbd7724780c61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14d38308737f4780d00e33accd76775') in 0.013576 seconds
+  Import took 0.016286 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 53.251611 seconds.
+  path: Assets/Models/Professor Oak/Materials/tr0004_00_skin_col.mat
+  artifactKey: Guid(7241ef484dd924740a86d370c9825f9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/Materials/tr0004_00_skin_col.mat using Guid(7241ef484dd924740a86d370c9825f9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1580848cb649ffa774e9feea65e2bf3f') in 0.010593 seconds
+  Import took 0.013633 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000832 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
@@ -337,62 +425,70 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.077 seconds
+- Completed reload, in  1.041 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1330 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 172.7 MB.
-System memory in use after: 172.7 MB.
+Unloading 1332 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 175.8 MB.
+System memory in use after: 175.9 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1874.
-Total: 1.894716 ms (FindLiveObjects: 0.181017 ms CreateObjectMapping: 0.044303 ms MarkObjects: 1.576359 ms  DeleteObjects: 0.091362 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1864.
+Total: 2.085780 ms (FindLiveObjects: 0.229570 ms CreateObjectMapping: 0.045917 ms MarkObjects: 1.639837 ms  DeleteObjects: 0.167684 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 138.990042 seconds.
+  path: Assets/Models/Professor Oak/Materials/tr0004_00_body_amb_B.mat
+  artifactKey: Guid(d9917d2bc20434934be388467851e456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Models/Professor Oak/Materials/tr0004_00_body_amb_B.mat using Guid(d9917d2bc20434934be388467851e456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58dc874124b42bcfc842a00e6ea493ba') in 0.083836 seconds
+  Import took 0.086803 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000712 seconds.
+Registered in 0.000910 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.37 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.084 seconds
+- Completed reload, in  1.214 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1330 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 173.2 MB.
-System memory in use after: 173.2 MB.
+Unloading 1332 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.3 MB.
+System memory in use after: 176.4 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1877.
-Total: 2.126924 ms (FindLiveObjects: 0.235126 ms CreateObjectMapping: 0.053774 ms MarkObjects: 1.738806 ms  DeleteObjects: 0.098157 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1868.
+Total: 1.991737 ms (FindLiveObjects: 0.197985 ms CreateObjectMapping: 0.046324 ms MarkObjects: 1.586030 ms  DeleteObjects: 0.159767 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001492 seconds.
+Registered in 0.000739 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.643 seconds
+- Completed reload, in  1.015 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1330 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 173.6 MB.
-System memory in use after: 173.7 MB.
+Unloading 1332 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 176.8 MB.
+System memory in use after: 176.8 MB.
 
-Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1880.
-Total: 2.426816 ms (FindLiveObjects: 0.274701 ms CreateObjectMapping: 0.062356 ms MarkObjects: 1.978506 ms  DeleteObjects: 0.110052 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 1871.
+Total: 2.505086 ms (FindLiveObjects: 0.230254 ms CreateObjectMapping: 0.063030 ms MarkObjects: 2.016005 ms  DeleteObjects: 0.193524 ms)
 

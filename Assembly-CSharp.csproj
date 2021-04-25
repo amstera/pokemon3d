@@ -62,10 +62,12 @@
     <Compile Include="Assets/LowPolyWater_Pack/Scripts/LowPolyWater.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/UserLutComponent.cs" />
+    <Compile Include="Assets/Scripts/DialogBox.cs" />
     <Compile Include="Assets/Scripts/CameraTracker.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets/Scripts/Sign.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
@@ -105,8 +107,8 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
-    <Compile Include="Assets/Scripts/DialogBox.cs" />
-    <Compile Include="Assets/Scripts/Sign.cs" />
+    <Compile Include="Assets/Scripts/Blocker.cs" />
+    <Compile Include="Assets/Scripts/Oak.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
