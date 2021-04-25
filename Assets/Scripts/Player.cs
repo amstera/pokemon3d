@@ -47,13 +47,13 @@ public class Player : MonoBehaviour
             _direction = newDirection;
         }
     }
+}
 
-    private enum Direction
-    {
-        None = -1,
-        North = 0,
-        West = 1,
-        South = 2,
-        East = 3
-    }
+enum Direction
+{
+    None = -1,
+    North = 0,
+    West = 1,
+    South = 2,
+    East = 3
 }
