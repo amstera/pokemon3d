@@ -4,6 +4,7 @@ public class Blocker : MonoBehaviour
 {
     public Player Player;
     public GameObject Oak;
+    public AudioClip OakAppears;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -11,6 +12,9 @@ public class Blocker : MonoBehaviour
         {
             Player.IsFrozen = true;
             Oak.SetActive(true);
+            AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
+            audioSource.clip = OakAppears;
+            audioSource.Play();
         }
     }
 }

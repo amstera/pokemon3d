@@ -66,6 +66,7 @@
     <Compile Include="Assets/Scripts/CameraTracker.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Attributes/GetSetAttribute.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets/Scripts/Blocker.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BuiltinDebugViewsComponent.cs" />
     <Compile Include="Assets/Scripts/Sign.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Attributes/TrackballGroupAttribute.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Components/DitheringComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Utils/RenderTextureFactory.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets/Scripts/Oak.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/PostProcessingComponent.cs" />
     <Compile Include="Assets/PostProcessing/Utilities/CustomMotionTexture/ExampleWheelController.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/VignetteComponent.cs" />
@@ -107,8 +109,6 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
-    <Compile Include="Assets/Scripts/Blocker.cs" />
-    <Compile Include="Assets/Scripts/Oak.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
