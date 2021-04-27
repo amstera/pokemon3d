@@ -109,6 +109,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/Scripts/DialogStarter.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
@@ -132,6 +133,8 @@
      <None Include="Assets/TSF/Shaders/TSFOutline.shader" />
      <None Include="Assets/PostProcessing/Editor Resources/Monitors/HistogramRender.shader" />
      <None Include="Assets/PostProcessing/Resources/Shaders/UberSecondPass.cginc" />
+     <None Include="Assets/Models/Bulbasaur/Bulbasaur/Tag.txt" />
+     <None Include="Assets/Models/Squirtle/Squirtle/Tag.txt" />
      <None Include="Assets/LowPolyWater_Pack/LowPoly Island/Credits.txt" />
      <None Include="Assets/PostProcessing/Resources/Bluenoise64/LICENSE.txt" />
      <None Include="Assets/PostProcessing/Resources/Shaders/ACES.cginc" />
@@ -148,6 +151,7 @@
      <None Include="Assets/PostProcessing/Resources/Bluenoise64/COPYING.txt" />
      <None Include="Assets/PostProcessing/Editor Resources/UI/Trackball.shader" />
      <None Include="Assets/PostProcessing/Editor Resources/Monitors/WaveformRender.shader" />
+     <None Include="Assets/Models/Charmander/Charmander/Tag.txt" />
      <None Include="Assets/PostProcessing/Resources/Shaders/Common.cginc" />
      <None Include="Assets/Customizable Skybox/Stylized Sky/Shaders/Stylized Sky.shader" />
      <None Include="Assets/PostProcessing/Editor Resources/Monitors/VectorscopeRender.shader" />
