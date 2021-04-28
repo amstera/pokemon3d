@@ -5,9 +5,12 @@ public class Player : MonoBehaviour
 {
     public float Speed = 3.5f;
     public bool IsFrozen;
+    public PokemonSelection SelectedPokemon = PokemonSelection.None;
+    public Animator Animator;
+    public AudioSource AS;
+
     private Direction _direction;
     private Direction _forcedDirection = Direction.None;
-    public Animator Animator;
 
     void Update()
     {
@@ -56,6 +59,19 @@ public class Player : MonoBehaviour
     {
         _forcedDirection = Direction.South;
         Invoke("GoRight", 7.25f);
+    }
+
+    public void ReceivePokemon(PokemonSelection selection)
+    {
+        Camera.main.GetComponent<AudioSource>().Stop();
+        AS.Play();
+        SelectedPokemon = selection;
+        Invoke("ResumeMusic", 2.5f);
+    }
+
+    private void ResumeMusic()
+    {
+        Camera.main.GetComponent<AudioSource>().Play();
     }
 
     private void GoRight()

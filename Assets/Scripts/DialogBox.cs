@@ -10,15 +10,22 @@ public class DialogBox : MonoBehaviour
     public Text Text;
     public RawImage Box;
     public RawImage Arrow;
+    public GameObject ChoiceBox;
+    public GameObject ChoiceArrow;
     public int MaxCharLengthPerBox = 80;
+    public AudioSource Press;
 
     private char[] _currentDialog;
     private int _dialogIndex;
     private bool _isPrinting;
     private bool _canFinish;
+    private bool _isChoice;
+    private bool _isChoosing;
     private bool _isFinished = true;
     private float _showDialogTimeout;
+    private int _choice = 1;
     private Action _callback;
+    private Action<bool> _choiceCallback;
 
     void Start()
     {
@@ -34,6 +41,19 @@ public class DialogBox : MonoBehaviour
         {
             return;
         }
+        if (_isChoosing)
+        {
+            if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && _choice == 1)
+            {
+                ChoiceArrow.transform.position += Vector3.down * 50;
+                _choice = -1;
+            }
+            else if ((Input.GetKeyDown(KeyCode.UpArrow) | Input.GetKeyDown(KeyCode.W)) && _choice == -1)
+            {
+                ChoiceArrow.transform.position += Vector3.up * 50;
+                _choice = 1;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (_canFinish)
@@ -43,16 +63,36 @@ public class DialogBox : MonoBehaviour
                     HideDialog();
                 }
             }
+            else if (_isChoosing)
+            {
+                _isChoosing = false;
+                bool isChosen = _choice == 1;
+                if (!isChosen)
+                {
+                    ChoiceArrow.transform.position += Vector3.up * 50;
+                    _choice = 1;
+                }
+                HideDialog();
+                _choiceCallback?.Invoke(isChosen);
+            }
             else if (!_isFinished)
             {
+                Press.Play();
                 StartCoroutine(PrintText());
             }
         }
     }
 
+    public void ShowChoiceDialog(string text, Action<bool> callback, bool forceMessage = false)
+    {
+        _isChoice = true;
+        _choiceCallback = callback;
+        ShowDialog(text, null, forceMessage);
+    }
+
     public void ShowDialog(string text, Action callback = null, bool forceMessage = false)
     {
-        if (!_isFinished || _isPrinting || (!forceMessage && (Time.time - _showDialogTimeout) < 0.5f))
+        if (!_isFinished || _isChoosing || _isPrinting || (!forceMessage && (Time.time - _showDialogTimeout) < 0.5f))
         {
             return;
         }
@@ -68,10 +108,13 @@ public class DialogBox : MonoBehaviour
 
     private void HideDialog()
     {
+        Press.Play();
+        ChoiceBox.gameObject.SetActive(false);
         Player.IsFrozen = false;
         Box.enabled = false;
         Arrow.enabled = false;
         Text.text = string.Empty;
+        _isChoice = false;
         _canFinish = false;
         _showDialogTimeout = Time.time;
         _isFinished = true;
@@ -91,7 +134,15 @@ public class DialogBox : MonoBehaviour
                 yield return new WaitForSeconds(0.01f);
             }
             _isPrinting = false;
-            _canFinish = true;
+            if (_isChoice)
+            {
+                ChoiceBox.SetActive(true);
+                _isChoosing = true;
+            }
+            else
+            {
+                _canFinish = true;
+            }
         }
         else
         {
