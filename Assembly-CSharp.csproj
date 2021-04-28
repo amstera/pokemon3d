@@ -97,6 +97,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Components/ColorGradingComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/PostProcessingProfile.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/FogComponent.cs" />
+    <Compile Include="Assets/Scripts/DialogStarter.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/BloomModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/GrainComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DepthOfFieldModel.cs" />
@@ -109,7 +110,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
-    <Compile Include="Assets/Scripts/DialogStarter.cs" />
+    <Compile Include="Assets/Scripts/Spinning.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />

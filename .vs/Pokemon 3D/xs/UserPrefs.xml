@@ -1,13 +1,14 @@
 ﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogStarter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spinning.cs">
     <Files>
-      <File FileName="Assets/Scripts/Sign.cs" Line="12" Column="1" />
-      <File FileName="Assets/Scripts/Blocker.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/Spinning.cs" Line="5" Column="30" />
+      <File FileName="Assets/Scripts/Sign.cs" />
+      <File FileName="Assets/Scripts/Blocker.cs" />
       <File FileName="Assets/Scripts/NPC.cs" />
       <File FileName="Assets/Scripts/Player.cs" />
       <File FileName="Assets/Scripts/CameraTracker.cs" />
       <File FileName="Assets/Scripts/DialogBox.cs" />
-      <File FileName="Assets/Scripts/Oak.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Oak.cs" />
       <File FileName="Assets/Scripts/DialogStarter.cs" Line="17" Column="84" />
     </Files>
     <Pads>
@@ -20,7 +21,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="99878928-d32f-426f-98d8-7596195bc439" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0d320499-8635-4e5f-ad7e-713dddbeab29" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
