@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PokemonChoice : MonoBehaviour
 {
     public Player Player;
-    public GameObject Red;
+    public Red Red;
     public PokemonSelection Selection;
     public GameObject Squirtle;
     public GameObject Bulbasaur;
@@ -118,8 +118,14 @@ public class PokemonChoice : MonoBehaviour
             redSelection = PokemonSelection.Charmander;
         }
         Destroy(Pokeballs[(int)redSelection]);
-        DialogBox.Instance.ShowDialog($"GARY received a {redSelection.ToString().ToUpper()}!", null, true);
+        DialogBox.Instance.ShowDialog($"GARY received a {redSelection.ToString().ToUpper()}!", ShowRedChallenge, true);
         Player.PlaySuccessChime();
+    }
+
+    private void ShowRedChallenge()
+    {
+        DialogBox.Instance.ShowDialog($"Let's check out our POKEMON! Come on, I'll take you on!", Red.EnterBattle, true);
+        Player.IsFrozen = true;
     }
 }
 

@@ -73,6 +73,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Utils/ColorGradingCurve.cs" />
     <Compile Include="Assets/Scripts/Spinning.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/PostProcessingBehaviour.cs" />
+    <Compile Include="Assets/Scripts/Pokeball.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/EyeAdaptationModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/AmbientOcclusionModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Utils/GraphicsUtils.cs" />
@@ -110,9 +111,10 @@
     <Compile Include="Assets/PostProcessing/Runtime/Models/AntialiasingModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/UserLutModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
-    <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
     <Compile Include="Assets/Scripts/PokemonChoice.cs" />
-    <Compile Include="Assets/Scripts/Pokeball.cs" />
+    <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
+    <Compile Include="Assets/Scripts/BattleTransition.cs" />
+    <Compile Include="Assets/Scripts/Red.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
