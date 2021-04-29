@@ -63,9 +63,14 @@ public class Player : MonoBehaviour
 
     public void ReceivePokemon(PokemonSelection selection)
     {
+        SelectedPokemon = selection;
+        PlaySuccessChime();
+    }
+
+    public void PlaySuccessChime()
+    {
         Camera.main.GetComponent<AudioSource>().Stop();
         AS.Play();
-        SelectedPokemon = selection;
         Invoke("ResumeMusic", 2.5f);
     }
 

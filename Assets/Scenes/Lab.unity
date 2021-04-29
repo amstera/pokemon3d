@@ -1091,7 +1091,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5832a70c57849fa9f254d14568ffc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 970567874}
+  Player: {fileID: 970567874}
+  Red: {fileID: 179926826}
   Selection: 0
   Squirtle: {fileID: 736278885}
   Bulbasaur: {fileID: 2040350036}

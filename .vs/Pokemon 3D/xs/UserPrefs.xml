@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DialogBox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player.cs">
     <Files>
-      <File FileName="Assets/Scripts/PokemonChoice.cs" Line="93" Column="1" />
-      <File FileName="Assets/Scripts/Spinning.cs" Line="11" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="67" Column="28" />
+      <File FileName="Assets/Scripts/PokemonChoice.cs" Line="119" Column="10" />
+      <File FileName="Assets/Scripts/Spinning.cs" />
       <File FileName="Assets/Scripts/Sign.cs" />
       <File FileName="Assets/Scripts/Blocker.cs" />
       <File FileName="Assets/Scripts/NPC.cs" />
-      <File FileName="Assets/Scripts/Player.cs" Line="69" Column="37" />
       <File FileName="Assets/Scripts/CameraTracker.cs" />
-      <File FileName="Assets/Scripts/DialogBox.cs" Line="68" Column="37" />
+      <File FileName="Assets/Scripts/DialogBox.cs" Line="66" Column="34" />
       <File FileName="Assets/Scripts/Oak.cs" />
-      <File FileName="Assets/Scripts/DialogStarter.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Pokeball.cs" Line="15" Column="42" />
+      <File FileName="Assets/Scripts/DialogStarter.cs" />
+      <File FileName="Assets/Scripts/Pokeball.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1d4f5fd7-3baa-4cfb-b246-63e79879f4f9" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="78f94ea2-6e17-4713-8f0b-53ab82b682b1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

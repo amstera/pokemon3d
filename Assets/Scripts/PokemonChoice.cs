@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class PokemonChoice : MonoBehaviour
 {
-    public Player player;
+    public Player Player;
+    public GameObject Red;
     public PokemonSelection Selection;
     public GameObject Squirtle;
     public GameObject Bulbasaur;
@@ -22,7 +23,7 @@ public class PokemonChoice : MonoBehaviour
     {
         if (enabled && Input.GetKeyDown(KeyCode.Space))
         {
-            player.IsFrozen = false;
+            Player.IsFrozen = false;
             gameObject.SetActive(false);
             if (Selection == PokemonSelection.Squirtle)
             {
@@ -41,7 +42,7 @@ public class PokemonChoice : MonoBehaviour
 
     void OnEnable()
     {
-        player.IsFrozen = true;
+        Player.IsFrozen = true;
         Charmander.SetActive(false);
         Squirtle.SetActive(false);
         Bulbasaur.SetActive(false);
@@ -86,8 +87,39 @@ public class PokemonChoice : MonoBehaviour
     private void ShowGainedPokemon()
     {
         Destroy(Pokeballs[(int)Selection]);
-        player.ReceivePokemon(Selection);
-        DialogBox.Instance.ShowDialog($"ASH received a {Selection.ToString().ToUpper()}!", null, true);
+        Player.ReceivePokemon(Selection);
+        DialogBox.Instance.ShowDialog($"ASH received a {Selection.ToString().ToUpper()}!", RedSelectionWait, true);
+    }
+
+    private void RedSelectionWait()
+    {
+        Invoke("RedSelection", 1.5f);
+    }
+
+    private void RedSelection()
+    {
+        Red.transform.Rotate(new Vector3(0, 90, 0), Space.Self);
+        DialogBox.Instance.ShowDialog($"GARY: I'll take this one, then!", RedTakePokemon, true);
+    }
+
+    private void RedTakePokemon()
+    {
+        PokemonSelection redSelection = PokemonSelection.None;
+        if (Selection == PokemonSelection.Squirtle)
+        {
+            redSelection = PokemonSelection.Bulbasaur;
+        }
+        else if (Selection == PokemonSelection.Charmander)
+        {
+            redSelection = PokemonSelection.Squirtle;
+        }
+        else if (Selection == PokemonSelection.Bulbasaur)
+        {
+            redSelection = PokemonSelection.Charmander;
+        }
+        Destroy(Pokeballs[(int)redSelection]);
+        DialogBox.Instance.ShowDialog($"GARY received a {redSelection.ToString().ToUpper()}!", null, true);
+        Player.PlaySuccessChime();
     }
 }
 
