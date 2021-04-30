@@ -64,6 +64,8 @@ public class Player : MonoBehaviour
     public void ReceivePokemon(PokemonSelection selection)
     {
         SelectedPokemon = selection;
+        PlayerPrefs.SetInt("PokemonSelection", (int)SelectedPokemon);
+        PlayerPrefs.Save();
         PlaySuccessChime();
     }
 
