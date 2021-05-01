@@ -10,6 +10,14 @@ public class BattleDialogBox : MonoBehaviour
     public GameObject Red;
     public GameObject SendPokemonPlayer;
     public GameObject SendPokemonOpponent;
+    public GameObject PlayerStats;
+    public GameObject OpponentStats;
+    public Text PlayerPokemonName;
+    public Text OpponentPokemonName;
+    public Slider PlayerHP;
+    public Slider OpponentHP;
+    public Text PlayerHPRemaining;
+    public Text MovesText;
     public List<GameObject> PlayerPokemon;
     public List<GameObject> OpponentPokemon;
     public RawImage PokemonRemaining;
@@ -30,6 +38,10 @@ public class BattleDialogBox : MonoBehaviour
     private bool _isFinished = true;
     private bool _redStartMoving;
     private bool _trainerStartMoving;
+    private bool _shouldSelectMove;
+    private int _playerHP = 20;
+    private int _opponentHP = 20;
+    private int _choice = 1;
     private Action _callback;
     private PokemonSelection _playerPokemon = PokemonSelection.Charmander;
     private PokemonSelection _opponentPokemon;
@@ -42,14 +54,17 @@ public class BattleDialogBox : MonoBehaviour
         }
         if (_playerPokemon == PokemonSelection.Charmander)
         {
+            MovesText.text = "FLAMETHROWER\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Squirtle;
         }
         else if (_playerPokemon == PokemonSelection.Squirtle)
         {
+            MovesText.text = "WATER GUN\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Bulbasaur;
         }
         else if (_playerPokemon == PokemonSelection.Bulbasaur)
         {
+            MovesText.text = "RAZOR LEAF\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Charmander;
         }
         ShowDialog("GARY wants to fight!", ShowOpponentPokemon);
@@ -69,11 +84,36 @@ public class BattleDialogBox : MonoBehaviour
         {
             Red.transform.position += Vector3.right * 10 * Time.deltaTime;
         }
+        if (_shouldSelectMove)
+        {
+            if ((Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) && _choice == 1)
+            {
+                Arrow.transform.position += Vector3.down * 50;
+                _choice = -1;
+            }
+            else if ((Input.GetKeyDown(KeyCode.UpArrow) | Input.GetKeyDown(KeyCode.W)) && _choice == -1)
+            {
+                Arrow.transform.position += Vector3.up * 50;
+                _choice = 1;
+            }
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (_canFinish)
             {
                 ResetDialog();
+            }
+            else if (_shouldSelectMove)
+            {
+                _shouldSelectMove = false;
+                bool firstChoice = _choice == 1;
+                if (!firstChoice)
+                {
+                    Arrow.transform.position += Vector3.up * 50;
+                    _choice = 1;
+                }
+                ResetDialog();
+                ShowMoves(firstChoice);
             }
             else if (!_isFinished)
             {
@@ -100,12 +140,15 @@ public class BattleDialogBox : MonoBehaviour
         Text.text = string.Empty;
         _canFinish = false;
         _isFinished = true;
+        MovesText.enabled = false;
         _callback?.Invoke();
     }
 
     private void ShowOpponentPokemon()
     {
         OpponentPokemonRemaining.enabled = false;
+        OpponentStats.SetActive(true);
+        OpponentPokemonName.text = $"{_opponentPokemon.ToString().ToUpper()}\nL5";
         _redStartMoving = true;
         Destroy(Red, 2);
         Invoke("BeginShowingPokemonOpponent", 0.5f);
@@ -130,6 +173,8 @@ public class BattleDialogBox : MonoBehaviour
     private void ShowPlayerPokemon()
     {
         PokemonRemaining.enabled = false;
+        PlayerStats.SetActive(true);
+        PlayerPokemonName.text = $"{_playerPokemon.ToString().ToUpper()}\nL5";
         _trainerStartMoving = true;
         Destroy(Player, 2);
         Invoke("BeginShowingPokemon", 0.5f);
@@ -140,7 +185,7 @@ public class BattleDialogBox : MonoBehaviour
         SoundEffectsAS.clip = PokeballSound;
         SoundEffectsAS.Play();
         SendPokemonPlayer.SetActive(true);
-        ShowDialog($"GO {_playerPokemon.ToString().ToUpper()}!");
+        ShowDialog($"GO {_playerPokemon.ToString().ToUpper()}!", ShowBattleDialog);
         Invoke("ActivatePokemon", 0.35f);
     }
 
@@ -149,6 +194,18 @@ public class BattleDialogBox : MonoBehaviour
         SoundEffectsAS.clip = PokemonCries[(int)_playerPokemon];
         SoundEffectsAS.Play();
         PlayerPokemon[(int)_playerPokemon].SetActive(true);
+    }
+
+    private void ShowBattleDialog()
+    {
+        Arrow.enabled = true;
+        _shouldSelectMove = true;
+        MovesText.enabled = true;
+    }
+
+    private void ShowMoves(bool firstChoice)
+    {
+        //do opponent move then your move
     }
 
     private IEnumerator PrintText()
