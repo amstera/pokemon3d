@@ -28,6 +28,7 @@ public class BattleDialogBox : MonoBehaviour
     public int MaxCharLengthPerBox = 80;
     public List<AudioClip> PokemonCries;
     public AudioClip PokeballSound;
+    public AudioClip Hit;
     public AudioSource Press;
     public AudioSource SoundEffectsAS;
 
@@ -39,12 +40,15 @@ public class BattleDialogBox : MonoBehaviour
     private bool _redStartMoving;
     private bool _trainerStartMoving;
     private bool _shouldSelectMove;
+    private bool _trainerFirstChoice;
+    private bool _opponentFirstChoice;
     private int _playerHP = 20;
     private int _opponentHP = 20;
     private int _choice = 1;
     private Action _callback;
     private PokemonSelection _playerPokemon = PokemonSelection.Charmander;
     private PokemonSelection _opponentPokemon;
+    private string[,] _moves = { { "FLAMETHROWER", "GROWL" }, { "WATER GUN", "TAIL WHIP" }, { "RAZOR LEAF", "GROWL" } };
 
     void Start()
     {
@@ -54,19 +58,21 @@ public class BattleDialogBox : MonoBehaviour
         }
         if (_playerPokemon == PokemonSelection.Charmander)
         {
-            MovesText.text = "FLAMETHROWER\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Squirtle;
         }
         else if (_playerPokemon == PokemonSelection.Squirtle)
         {
-            MovesText.text = "WATER GUN\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Bulbasaur;
         }
         else if (_playerPokemon == PokemonSelection.Bulbasaur)
         {
-            MovesText.text = "RAZOR LEAF\nTACKLE\n-\n-";
             _opponentPokemon = PokemonSelection.Charmander;
         }
+        for (int i = 0; i < 2; i++)
+        {
+            MovesText.text += $"{ _moves[(int)_playerPokemon, i]}\n";
+        }
+        MovesText.text += "-";
         ShowDialog("GARY wants to fight!", ShowOpponentPokemon);
     }
 
@@ -106,14 +112,18 @@ public class BattleDialogBox : MonoBehaviour
             else if (_shouldSelectMove)
             {
                 _shouldSelectMove = false;
-                bool firstChoice = _choice == 1;
-                if (!firstChoice)
+                _trainerFirstChoice = _choice == 1;
+                _opponentFirstChoice = UnityEngine.Random.Range(0, 2) == 1;
+                if (!_trainerFirstChoice)
                 {
                     Arrow.transform.position += Vector3.up * 50;
                     _choice = 1;
                 }
                 ResetDialog();
-                ShowMoves(firstChoice);
+
+                int opponentIndex = _opponentFirstChoice ? 0 : 1;
+                string opponentMove = _moves[(int)_opponentPokemon, opponentIndex];
+                ShowDialog($"Enemy {_opponentPokemon.ToString().ToUpper()} used {opponentMove}!", DoOpponentMove);
             }
             else if (!_isFinished)
             {
@@ -142,6 +152,7 @@ public class BattleDialogBox : MonoBehaviour
         _isFinished = true;
         MovesText.enabled = false;
         _callback?.Invoke();
+        _callback = null;
     }
 
     private void ShowOpponentPokemon()
@@ -203,9 +214,45 @@ public class BattleDialogBox : MonoBehaviour
         MovesText.enabled = true;
     }
 
-    private void ShowMoves(bool firstChoice)
+    private void DoOpponentMove()
     {
-        //do opponent move then your move
+        int opponentIndex = _opponentFirstChoice ? 0 : 1;
+        string opponentMove = _moves[(int)_opponentPokemon, opponentIndex];
+        GameObject effect = OpponentPokemon[(int)_opponentPokemon].transform.Find(opponentMove).gameObject;
+        effect.SetActive(true);
+
+        if (opponentIndex == 1)
+        {
+            //play sound
+            if (_opponentPokemon == PokemonSelection.Squirtle)
+            {
+                ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowPlayerMove);
+            }
+            else
+            {
+                ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowPlayerMove);
+            }
+        }
+        else
+        {
+            SoundEffectsAS.clip = Hit;
+            SoundEffectsAS.Play();
+            _playerHP -= 4;
+            // update text and HP bar
+            ShowPlayerMove();
+        }
+    }
+
+    private void ShowPlayerMove()
+    {
+        int index = _trainerFirstChoice ? 0 : 1;
+        string move = _moves[(int)_playerPokemon, index];
+        ShowDialog($"{_playerPokemon.ToString().ToUpper()} used {move}!", DoPlayerMove);
+    }
+
+    private void DoPlayerMove()
+    {
+
     }
 
     private IEnumerator PrintText()
