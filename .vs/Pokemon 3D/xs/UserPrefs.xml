@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleDialogBox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Spinning.cs">
     <Files>
-      <File FileName="Assets/Scripts/PokemonChoice.cs" Line="90" Column="25" />
-      <File FileName="Assets/Scripts/Player.cs" Line="67" Column="45" />
-      <File FileName="Assets/Scripts/Spinning.cs" />
+      <File FileName="Assets/Scripts/Spinning.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/PokemonChoice.cs" />
+      <File FileName="Assets/Scripts/Player.cs" />
       <File FileName="Assets/Scripts/Sign.cs" />
       <File FileName="Assets/Scripts/Blocker.cs" />
       <File FileName="Assets/Scripts/NPC.cs" />
@@ -12,7 +12,7 @@
       <File FileName="Assets/Scripts/Oak.cs" />
       <File FileName="Assets/Scripts/DialogStarter.cs" />
       <File FileName="Assets/Scripts/Pokeball.cs" />
-      <File FileName="Assets/Scripts/BattleTransition.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BattleTransition.cs" />
       <File FileName="Assets/Scripts/Red.cs" />
       <File FileName="Assets/Scripts/BattleDialogBox.cs" Line="148" Column="6" />
     </Files>
@@ -26,7 +26,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="37cc055e-1de7-4bf4-8e62-bfbb9628a85e" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="786e100a-242e-4aa2-a7e8-608a3e588157" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
