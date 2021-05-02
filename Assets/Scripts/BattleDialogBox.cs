@@ -31,6 +31,7 @@ public class BattleDialogBox : MonoBehaviour
     public AudioClip Hit;
     public AudioSource Press;
     public AudioSource SoundEffectsAS;
+    public AudioSource LowHealthSound;
 
     private char[] _currentDialog;
     private int _dialogIndex;
@@ -45,6 +46,8 @@ public class BattleDialogBox : MonoBehaviour
     private int _playerHP = 20;
     private int _opponentHP = 20;
     private int _choice = 1;
+    private int _attackModifierPlayer = 4;
+    private int _attackModifierOpponent = 4;
     private Action _callback;
     private PokemonSelection _playerPokemon = PokemonSelection.Charmander;
     private PokemonSelection _opponentPokemon;
@@ -113,7 +116,7 @@ public class BattleDialogBox : MonoBehaviour
             {
                 _shouldSelectMove = false;
                 _trainerFirstChoice = _choice == 1;
-                _opponentFirstChoice = UnityEngine.Random.Range(0, 2) == 1;
+                _opponentFirstChoice = _opponentHP <= 4 ? true : UnityEngine.Random.Range(0, 2) == 1;
                 if (!_trainerFirstChoice)
                 {
                     Arrow.transform.position += Vector3.up * 50;
@@ -224,12 +227,22 @@ public class BattleDialogBox : MonoBehaviour
 
         if (opponentIndex == 0)
         {
-            SoundEffectsAS.clip = Hit;
-            SoundEffectsAS.Play();
-            _playerHP -= 4;
-            PlayerHPRemaining.text = $"{_playerHP}/20";
-            PlayerHP.TakeHit(4);
+            int amount = Math.Max(1, _attackModifierOpponent);
+            _playerHP -= amount;
+            PlayerHPRemaining.text = $"{Math.Max(0, _playerHP)}/20";
+            PlayerHP.TakeHit(amount);
+            if (_playerHP <= 5 && !LowHealthSound.isPlaying)
+            {
+                LowHealthSound.Play();
+            }
         }
+        else
+        {
+            SoundEffectsAS.clip = PokemonCries[(int)_opponentPokemon];
+            SoundEffectsAS.Play();
+        }
+
+        StartCoroutine(FlickerPokemon(true));
     }
 
     private void ActOpponentMove()
@@ -237,13 +250,14 @@ public class BattleDialogBox : MonoBehaviour
         int opponentIndex = _opponentFirstChoice ? 0 : 1;
         if (opponentIndex == 1)
         {
-            //play sound
             if (_opponentPokemon == PokemonSelection.Squirtle)
             {
+                _attackModifierOpponent++;
                 ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowPlayerMove);
             }
             else
             {
+                _attackModifierPlayer--;
                 ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowPlayerMove);
             }
         }
@@ -262,11 +276,17 @@ public class BattleDialogBox : MonoBehaviour
 
         if (index == 0)
         {
-            SoundEffectsAS.clip = Hit;
-            SoundEffectsAS.Play();
-            _opponentHP -= 4;
-            OpponentHP.TakeHit(4);
+            int amount = Math.Max(1, _attackModifierPlayer);
+            _opponentHP -= amount;
+            OpponentHP.TakeHit(amount);
         }
+        else
+        {
+            SoundEffectsAS.clip = PokemonCries[(int)_playerPokemon];
+            SoundEffectsAS.Play();
+        }
+
+        StartCoroutine(FlickerPokemon(false));
 
         ShowDialog($"{_playerPokemon.ToString().ToUpper()} used {move}!", ActPlayerMove);
     }
@@ -276,13 +296,14 @@ public class BattleDialogBox : MonoBehaviour
         int index = _trainerFirstChoice ? 0 : 1;
         if (index == 1)
         {
-            //play sound
-            if (_opponentPokemon == PokemonSelection.Squirtle)
+            if (_playerPokemon == PokemonSelection.Squirtle)
             {
+                _attackModifierPlayer++;
                 ShowDialog($"{_opponentPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowBattleDialog);
             }
             else
             {
+                _attackModifierOpponent--;
                 ShowDialog($"{_opponentPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowBattleDialog);
             }
         }
@@ -319,5 +340,32 @@ public class BattleDialogBox : MonoBehaviour
             _isPrinting = false;
             _dialogIndex++;
         }
+    }
+
+    private IEnumerator FlickerPokemon(bool isPlayer)
+    {
+        yield return new WaitForSeconds(0.35f);
+
+        GameObject pokemon;
+        if (isPlayer)
+        {
+            pokemon = PlayerPokemon[(int)_playerPokemon];
+        }
+        else
+        {
+            pokemon = OpponentPokemon[(int)_opponentPokemon];
+        }
+
+        if (!SoundEffectsAS.isPlaying)
+        {
+            SoundEffectsAS.clip = Hit;
+            SoundEffectsAS.Play();
+        }
+
+        pokemon.SetActive(false);
+
+        yield return new WaitForSeconds(0.25f);
+
+        pokemon.SetActive(true);
     }
 }

@@ -4,7 +4,7 @@ public class AttackParticle : MonoBehaviour
 {
     void OnEnable()
     {
-        Invoke("Disable", 2f);
+        Invoke("Disable", 1.5f);
     }
 
     private void Disable()
