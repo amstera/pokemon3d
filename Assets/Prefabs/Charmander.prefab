@@ -2486,6 +2486,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 259660342731555725}
     m_Modifications:
     - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: simulationSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: ShapeModule.m_Scale.x
       value: 0.5
       objectReference: {fileID: 0}
@@ -2503,7 +2507,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.1
+      value: 0.0001
       objectReference: {fileID: 0}
     - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: ShapeModule.radiusThickness

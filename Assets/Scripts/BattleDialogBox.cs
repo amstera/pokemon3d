@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class BattleDialogBox : MonoBehaviour
 {
     public GameObject Player;
     public GameObject Red;
+    public GameObject SecondRed;
     public GameObject SendPokemonPlayer;
     public GameObject SendPokemonOpponent;
     public GameObject PlayerStats;
@@ -29,6 +31,8 @@ public class BattleDialogBox : MonoBehaviour
     public List<AudioClip> PokemonCries;
     public AudioClip PokeballSound;
     public AudioClip Hit;
+    public AudioClip VictoryTheme;
+    public AudioClip PokemonFainted;
     public AudioSource Press;
     public AudioSource SoundEffectsAS;
     public AudioSource LowHealthSound;
@@ -43,6 +47,7 @@ public class BattleDialogBox : MonoBehaviour
     private bool _shouldSelectMove;
     private bool _trainerFirstChoice;
     private bool _opponentFirstChoice;
+    private bool _matchEnded;
     private int _playerHP = 20;
     private int _opponentHP = 20;
     private int _choice = 1;
@@ -81,10 +86,6 @@ public class BattleDialogBox : MonoBehaviour
 
     void Update()
     {
-        if (_isPrinting)
-        {
-            return;
-        }
         if (_trainerStartMoving && Player != null)
         {
             Player.transform.position += Vector3.left * 10 * Time.deltaTime;
@@ -92,6 +93,14 @@ public class BattleDialogBox : MonoBehaviour
         else if (_redStartMoving && Red != null)
         {
             Red.transform.position += Vector3.right * 10 * Time.deltaTime;
+        }
+        if (SecondRed.activeSelf && SecondRed.transform.position.x > 3.14)
+        {
+            SecondRed.transform.position += Vector3.left * 10 * Time.deltaTime;
+        }
+        if (_isPrinting)
+        {
+            return;
         }
         if (_shouldSelectMove)
         {
@@ -235,6 +244,10 @@ public class BattleDialogBox : MonoBehaviour
             {
                 LowHealthSound.Play();
             }
+            if (_playerHP <= 0)
+            {
+                _matchEnded = true;
+            }
         }
         else
         {
@@ -247,18 +260,30 @@ public class BattleDialogBox : MonoBehaviour
 
     private void ActOpponentMove()
     {
+        if (_matchEnded)
+        {
+            EndMatch();
+            return;
+        }
         int opponentIndex = _opponentFirstChoice ? 0 : 1;
         if (opponentIndex == 1)
         {
-            if (_opponentPokemon == PokemonSelection.Squirtle)
+            if (UnityEngine.Random.Range(0, 2) == 1)
             {
-                _attackModifierOpponent++;
-                ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowPlayerMove);
+                ShowDialog($"But, it failed!", ShowPlayerMove);
             }
             else
             {
-                _attackModifierPlayer--;
-                ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowPlayerMove);
+                if (_opponentPokemon == PokemonSelection.Squirtle)
+                {
+                    _attackModifierOpponent++;
+                    ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowPlayerMove);
+                }
+                else
+                {
+                    _attackModifierPlayer--;
+                    ShowDialog($"{_playerPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowPlayerMove);
+                }
             }
         }
         else
@@ -279,6 +304,10 @@ public class BattleDialogBox : MonoBehaviour
             int amount = Math.Max(1, _attackModifierPlayer);
             _opponentHP -= amount;
             OpponentHP.TakeHit(amount);
+            if (_opponentHP <= 0)
+            {
+                _matchEnded = true;
+            }
         }
         else
         {
@@ -293,6 +322,11 @@ public class BattleDialogBox : MonoBehaviour
 
     private void ActPlayerMove()
     {
+        if (_matchEnded)
+        {
+            EndMatch();
+            return;
+        }
         int index = _trainerFirstChoice ? 0 : 1;
         if (index == 1)
         {
@@ -311,6 +345,58 @@ public class BattleDialogBox : MonoBehaviour
         {
             ShowBattleDialog();
         }
+    }
+
+    private void EndMatch()
+    {
+        bool isWinner = _opponentHP <= 0;
+        SoundEffectsAS.clip = PokemonFainted;
+        SoundEffectsAS.Play();
+
+        if (isWinner)
+        {
+            LowHealthSound.Stop();
+            AudioSource audioSource = Camera.main.GetComponent<AudioSource>();
+            audioSource.Stop();
+            audioSource.clip = VictoryTheme;
+            audioSource.Play();
+
+            OpponentPokemon[(int)_opponentPokemon].SetActive(false);
+
+            ShowDialog($"Enemy {_opponentPokemon.ToString().ToUpper()} fainted!", ShowOpponentText);
+        }
+        else
+        {
+            PlayerPokemon[(int)_playerPokemon].SetActive(false);
+
+            ShowDialog($"{_playerPokemon.ToString().ToUpper()} fainted!", ShowOpponentText);
+        }
+    }
+
+    private void ShowOpponentText()
+    {
+        if (OpponentPokemon[(int)_opponentPokemon] != null)
+        {
+            OpponentPokemon[(int)_opponentPokemon].SetActive(false);
+        }
+
+        SecondRed.SetActive(true);
+
+        bool isWinner = _opponentHP <= 0;
+        if (isWinner)
+        {
+            ShowDialog($"WHAT? Unbelievable! I picked the wrong POKEMON!", EndGame);
+        }
+        else
+        {
+            ShowDialog($"Yeah! Am I great or what?", EndGame);
+        }
+    }
+
+    private void EndGame()
+    {
+        Box.enabled = false;
+        SceneManager.LoadScene("End");
     }
 
     private IEnumerator PrintText()
