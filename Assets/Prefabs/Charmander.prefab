@@ -2485,13 +2485,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 259660342731555725}
     m_Modifications:
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.arc.spread
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202144077209639262, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6036890381364849500, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: m_Name
       value: FLAMETHROWER
       objectReference: {fileID: 0}
+    - target: {fileID: 6036890381364849500, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2503,7 +2555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.02
+      value: 0.63
       objectReference: {fileID: 0}
     - target: {fileID: 8271603396178635461, guid: ed845508a41974425950096730627099, type: 3}
       propertyPath: m_LocalRotation.w

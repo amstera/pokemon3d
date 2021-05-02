@@ -484,6 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 218521702}
+  - component: {fileID: 218521704}
   - component: {fileID: 218521703}
   m_Layer: 5
   m_Name: HP
@@ -564,6 +565,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &218521704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218521701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2077dbe05fce4863864cdae48864d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 20
+  MaxHealth: 20
 --- !u!1001 &235808806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1826,8 +1841,8 @@ MonoBehaviour:
   OpponentStats: {fileID: 1561837212}
   PlayerPokemonName: {fileID: 1875556076}
   OpponentPokemonName: {fileID: 957422773}
-  PlayerHP: {fileID: 1560886889}
-  OpponentHP: {fileID: 218521703}
+  PlayerHP: {fileID: 1560886890}
+  OpponentHP: {fileID: 218521704}
   PlayerHPRemaining: {fileID: 1875289321}
   MovesText: {fileID: 742176810}
   PlayerPokemon:
@@ -2639,6 +2654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1560886888}
+  - component: {fileID: 1560886890}
   - component: {fileID: 1560886889}
   m_Layer: 5
   m_Name: HP
@@ -2719,6 +2735,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1560886890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560886887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2077dbe05fce4863864cdae48864d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 20
+  MaxHealth: 20
 --- !u!1 &1561837212
 GameObject:
   m_ObjectHideFlags: 0

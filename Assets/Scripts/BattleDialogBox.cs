@@ -14,8 +14,8 @@ public class BattleDialogBox : MonoBehaviour
     public GameObject OpponentStats;
     public Text PlayerPokemonName;
     public Text OpponentPokemonName;
-    public Slider PlayerHP;
-    public Slider OpponentHP;
+    public HP PlayerHP;
+    public HP OpponentHP;
     public Text PlayerHPRemaining;
     public Text MovesText;
     public List<GameObject> PlayerPokemon;
@@ -119,11 +119,13 @@ public class BattleDialogBox : MonoBehaviour
                     Arrow.transform.position += Vector3.up * 50;
                     _choice = 1;
                 }
+                _callback = null;
                 ResetDialog();
 
                 int opponentIndex = _opponentFirstChoice ? 0 : 1;
                 string opponentMove = _moves[(int)_opponentPokemon, opponentIndex];
-                ShowDialog($"Enemy {_opponentPokemon.ToString().ToUpper()} used {opponentMove}!", DoOpponentMove);
+                DoOpponentMove();
+                ShowDialog($"Enemy {_opponentPokemon.ToString().ToUpper()} used {opponentMove}!", ActOpponentMove);
             }
             else if (!_isFinished)
             {
@@ -135,7 +137,7 @@ public class BattleDialogBox : MonoBehaviour
 
     public void ShowDialog(string text, Action callback = null)
     {
-        _isFinished = false;
+         _isFinished = false;
         Arrow.enabled = false;
         _dialogIndex = 0;
         _callback = callback;
@@ -143,7 +145,7 @@ public class BattleDialogBox : MonoBehaviour
         StartCoroutine(PrintText());
     }
 
-    private void ResetDialog()
+    private void ResetDialog() 
     {
         Press.Play();
         Arrow.enabled = false;
@@ -152,7 +154,6 @@ public class BattleDialogBox : MonoBehaviour
         _isFinished = true;
         MovesText.enabled = false;
         _callback?.Invoke();
-        _callback = null;
     }
 
     private void ShowOpponentPokemon()
@@ -221,6 +222,19 @@ public class BattleDialogBox : MonoBehaviour
         GameObject effect = OpponentPokemon[(int)_opponentPokemon].transform.Find(opponentMove).gameObject;
         effect.SetActive(true);
 
+        if (opponentIndex == 0)
+        {
+            SoundEffectsAS.clip = Hit;
+            SoundEffectsAS.Play();
+            _playerHP -= 4;
+            PlayerHPRemaining.text = $"{_playerHP}/20";
+            PlayerHP.TakeHit(4);
+        }
+    }
+
+    private void ActOpponentMove()
+    {
+        int opponentIndex = _opponentFirstChoice ? 0 : 1;
         if (opponentIndex == 1)
         {
             //play sound
@@ -235,10 +249,6 @@ public class BattleDialogBox : MonoBehaviour
         }
         else
         {
-            SoundEffectsAS.clip = Hit;
-            SoundEffectsAS.Play();
-            _playerHP -= 4;
-            // update text and HP bar
             ShowPlayerMove();
         }
     }
@@ -247,12 +257,39 @@ public class BattleDialogBox : MonoBehaviour
     {
         int index = _trainerFirstChoice ? 0 : 1;
         string move = _moves[(int)_playerPokemon, index];
-        ShowDialog($"{_playerPokemon.ToString().ToUpper()} used {move}!", DoPlayerMove);
+        GameObject effect = PlayerPokemon[(int)_playerPokemon].transform.Find(move).gameObject;
+        effect.SetActive(true);
+
+        if (index == 0)
+        {
+            SoundEffectsAS.clip = Hit;
+            SoundEffectsAS.Play();
+            _opponentHP -= 4;
+            OpponentHP.TakeHit(4);
+        }
+
+        ShowDialog($"{_playerPokemon.ToString().ToUpper()} used {move}!", ActPlayerMove);
     }
 
-    private void DoPlayerMove()
+    private void ActPlayerMove()
     {
-
+        int index = _trainerFirstChoice ? 0 : 1;
+        if (index == 1)
+        {
+            //play sound
+            if (_opponentPokemon == PokemonSelection.Squirtle)
+            {
+                ShowDialog($"{_opponentPokemon.ToString().ToUpper()}'s DEFENSE fell!", ShowBattleDialog);
+            }
+            else
+            {
+                ShowDialog($"{_opponentPokemon.ToString().ToUpper()}'s ATTACK fell!", ShowBattleDialog);
+            }
+        }
+        else
+        {
+            ShowBattleDialog();
+        }
     }
 
     private IEnumerator PrintText()

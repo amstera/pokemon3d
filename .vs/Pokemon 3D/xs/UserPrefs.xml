@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleDialogBox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HP.cs">
     <Files>
-      <File FileName="Assets/Scripts/Spinning.cs" Line="8" Column="1" />
-      <File FileName="Assets/Scripts/PokemonChoice.cs" Line="135" Column="5" />
+      <File FileName="Assets/Scripts/HP.cs" Line="33" Column="1" />
+      <File FileName="Assets/Scripts/Spinning.cs" />
+      <File FileName="Assets/Scripts/PokemonChoice.cs" />
       <File FileName="Assets/Scripts/Player.cs" />
       <File FileName="Assets/Scripts/Sign.cs" />
       <File FileName="Assets/Scripts/Blocker.cs" />
@@ -14,7 +15,8 @@
       <File FileName="Assets/Scripts/Pokeball.cs" />
       <File FileName="Assets/Scripts/BattleTransition.cs" />
       <File FileName="Assets/Scripts/Red.cs" />
-      <File FileName="Assets/Scripts/BattleDialogBox.cs" Line="233" Column="50" />
+      <File FileName="Assets/Scripts/BattleDialogBox.cs" Line="272" Column="6" />
+      <File FileName="Assets/Scripts/AttackParticle.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +28,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2e859f0f-1468-4bc3-ac97-9338950ee371" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="918e2740-6ee9-445c-8c91-18a2771fea11" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -4810,7 +4810,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47b6b88d425f7234aae309cb9a973743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Delay: 0.25
+  Delay: 0
   MaximumStress: 0.6
   Range: 45
 --- !u!199 &397594470853041954
