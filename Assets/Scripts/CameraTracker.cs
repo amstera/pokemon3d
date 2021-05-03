@@ -14,5 +14,4 @@ public class CameraTracker : MonoBehaviour
     {
         transform.position = Target.transform.position + _offset;
     }
-
 }

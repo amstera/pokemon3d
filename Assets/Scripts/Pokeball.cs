@@ -8,7 +8,7 @@ public class Pokeball : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && PC.CanChoose)
         {
             if (!player.IsFrozen && player.SelectedPokemon == PokemonSelection.None && Vector3.Distance(transform.position, player.transform.position) <= 1.4f)
             {

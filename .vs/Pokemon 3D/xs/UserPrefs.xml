@@ -1,22 +1,23 @@
 ﻿<Properties StartupConfiguration="{2543F82F-6ADE-84A2-23B1-FB6ED5FCA54B}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BattleDialogBox.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CameraTracker.cs">
     <Files>
-      <File FileName="Assets/Scripts/BattleDialogBox.cs" Line="395" Column="1" />
-      <File FileName="Assets/Scripts/HP.cs" Line="15" Column="42" />
+      <File FileName="Assets/Scripts/PokemonChoice.cs" Line="38" Column="14" />
+      <File FileName="Assets/Scripts/BattleDialogBox.cs" Line="359" Column="22" />
+      <File FileName="Assets/Scripts/HP.cs" />
       <File FileName="Assets/Scripts/Spinning.cs" />
-      <File FileName="Assets/Scripts/PokemonChoice.cs" />
       <File FileName="Assets/Scripts/Player.cs" />
       <File FileName="Assets/Scripts/Sign.cs" />
       <File FileName="Assets/Scripts/Blocker.cs" />
       <File FileName="Assets/Scripts/NPC.cs" />
-      <File FileName="Assets/Scripts/CameraTracker.cs" />
+      <File FileName="Assets/Scripts/CameraTracker.cs" Line="13" Column="22" />
       <File FileName="Assets/Scripts/DialogBox.cs" />
       <File FileName="Assets/Scripts/Oak.cs" />
       <File FileName="Assets/Scripts/DialogStarter.cs" />
-      <File FileName="Assets/Scripts/Pokeball.cs" />
+      <File FileName="Assets/Scripts/Pokeball.cs" Line="12" Column="10" />
       <File FileName="Assets/Scripts/BattleTransition.cs" />
       <File FileName="Assets/Scripts/Red.cs" />
       <File FileName="Assets/Scripts/AttackParticle.cs" />
+      <File FileName="Assets/Scripts/EndScreen.cs" Line="31" Column="10" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -28,7 +29,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="31ef748e-6bc3-4f98-a32b-9cb8a8203ce8" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="34d0a115-67fc-4f87-91e1-afb2d605bc2f" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

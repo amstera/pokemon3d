@@ -353,6 +353,9 @@ public class BattleDialogBox : MonoBehaviour
         SoundEffectsAS.clip = PokemonFainted;
         SoundEffectsAS.Play();
 
+        PlayerPrefs.SetInt("IsWinner", isWinner ? 1 : 0);
+        PlayerPrefs.Save();
+
         if (isWinner)
         {
             LowHealthSound.Stop();

@@ -18,6 +18,7 @@ public class PokemonChoice : MonoBehaviour
     public AudioClip CharmanderCry;
     public AudioClip SquirtleCry;
     public AudioClip BulbasaurCry;
+    public bool CanChoose = true;
 
     void Update()
     {
@@ -42,6 +43,7 @@ public class PokemonChoice : MonoBehaviour
 
     void OnEnable()
     {
+        CanChoose = false;
         Player.IsFrozen = true;
         Charmander.SetActive(false);
         Squirtle.SetActive(false);
@@ -82,6 +84,8 @@ public class PokemonChoice : MonoBehaviour
         {
             DialogBox.Instance.ShowDialog("This POKEMON is really energetic!", ShowGainedPokemon, true);
         }
+
+        Invoke("UpdateCanChoose", 0.25f);
     }
 
     private void ShowGainedPokemon()
@@ -100,6 +104,11 @@ public class PokemonChoice : MonoBehaviour
     {
         Red.transform.Rotate(new Vector3(0, 90, 0), Space.Self);
         DialogBox.Instance.ShowDialog($"GARY: I'll take this one, then!", RedTakePokemon, true);
+    }
+
+    private void UpdateCanChoose()
+    {
+        CanChoose = true;
     }
 
     private void RedTakePokemon()

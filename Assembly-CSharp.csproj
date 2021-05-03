@@ -104,6 +104,7 @@
     <Compile Include="Assets/Scripts/AttackParticle.cs" />
     <Compile Include="Assets/Scripts/BattleDialogBox.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/FogComponent.cs" />
+    <Compile Include="Assets/Scripts/HP.cs" />
     <Compile Include="Assets/Scripts/DialogStarter.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/BloomModel.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Components/GrainComponent.cs" />
@@ -119,7 +120,7 @@
     <Compile Include="Assets/PostProcessing/Runtime/Components/BloomComponent.cs" />
     <Compile Include="Assets/Scripts/PokemonChoice.cs" />
     <Compile Include="Assets/PostProcessing/Runtime/Models/DitheringModel.cs" />
-    <Compile Include="Assets/Scripts/HP.cs" />
+    <Compile Include="Assets/Scripts/EndScreen.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Models/Pokemon Trainers/readme.txt" />
